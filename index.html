@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+	<link rel="icon" href="favicon.png">
     <meta charset="UTF-8">
 	<meta http-equiv="Pragma" content="no-cache">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitación de Boda</title>
+    <title>Gina & Roberto | XV Aniversario de Bodas</title>
 	<!--https://fonts.google.com/ //-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,13 +19,14 @@
             	padding: 0;
             	box-sizing: border-box;
         }
+		/* Texto General */
         body {
             	background: url('boda.jpg') no-repeat center center fixed;
-            	background-size: cover;	
+            	background-size: cover; /* */
             	text-align: center;
 				color: #000;
             	font-family: 'Cormorant', serif;
-				font-size: clamp(10px, 4vw, 40px);
+				font-size: clamp(10px, 4vw, 20px);
         }
         .content {
             	background: rgba(255, 255, 255, 0.01);
@@ -33,42 +35,47 @@
             	max-width: 90%;
             	margin: auto;
         }
+		/* Quienes */
         h1 {
 				font-family: "Petemoss", serif;
 				font-weight: 400;
 				font-style: normal;
-				font-size: clamp(64px, 20vw, 180px);
+				font-size: clamp(64px, 20vw, 128px);
 				margin-top: 10px;
 				margin-bottom: 25px;
         }
+		/*Evento */
         h2 {
 				font-family: "Allura", serif;
 				font-weight: 400;
 				font-style: normal;
-				font-size: clamp(25px, 8vw, 100px);
+				font-size: clamp(25px, 8vw, 50px);
 				margin-top: 40px;
         }
+		/* Fecha */
         h3 {
 				font-family: "Abel", serif;
 				font-weight: 400;
 				font-style: normal;		
-				font-size: clamp(16px, 3vw, 40px);
+				font-size: clamp(16px, 3vw, 20px);
 				margin-bottom: 50px;
         }
+		/* Templo */
         h4 {
 				font-family: "Cormorant", serif;
 				font-optical-sizing: auto;
 				font-weight: 550;
 				font-style: normal;
-				font-size: clamp(20px, 5vw, 60px);
+				font-size: clamp(20px, 5vw, 30px);
         }
+		/* Direccion */
         h5 {
-				font-family: 'Cormorant', serif;
-				font-size: clamp(5px, 3vw, 20px);		
+				font-family: 'Cormorant', serif;					
+				font-size: clamp(5px, 3vw, 18px);		
         }
         .countdown {
 				font-family: 'Cormorant', serif;
-				font-size: clamp(21px, 4vw, 40px);
+				font-size: clamp(18px, 3vw, 24px);
 				margin-top: 65px;
         }
     </style>
@@ -80,7 +87,7 @@
 		<h2>XV Aniversario de Bodas</h2>
 		<h3>Sábado&nbsp;&nbsp;|&nbsp;&nbsp;31 de Enero de 2026&nbsp;&nbsp;|&nbsp;&nbsp;1:00 p.m.</h3>
 		<h4>Templo de San Antonio de Padua</h4>
-        <h5>Calle Ignacio Zaragoza esquina con Calle Pedro Parga, Zona Centro, Aguascalientes, Ags.</h5>
+        <h5>Zaragoza esquina Pedro Parga, Zona Centro, Aguascalientes, Ags.</h5>
         <div class="countdown" id="countdown"></div>
     </div>
     <script>
