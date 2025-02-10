@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+	<link rel="preload" href="boda.jpg" as="image">
 	<link rel="icon" href="favicon.png">
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
 	<meta http-equiv="Pragma" content="no-cache">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gina & Roberto | XV Aniversario de Bodas</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gina & Roberto | XV Aniversario de Bodas</title>
 	
-    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="styles.css">
 	<link rel="stylesheet" href="css/all.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!--//-->
-	
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!--//-->
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> <!--//-->
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,43 +21,43 @@
 	<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Petemoss&display=swap" rel="stylesheet">
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.7.1.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.7.1.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
-	
-    <script type="text/javascript">
+
+	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#CalendarContainer').delay(6000).fadeIn(500);
 		});
 	</script>
-	
+
 	<script type="text/javascript">
 		(function () {
-		  const second = 1000,
-				minute = second * 60,
-				hour = minute * 60,
-				day = hour * 24;
+			const second = 1000,
+			minute = second * 60,
+			hour = minute * 60,
+			day = hour * 24;
 
-		  const countDown = new Date("January 31, 2026 13:00:00").getTime(),
-			  x = setInterval(function() {    
+			const countDown = new Date("January 31, 2026 13:00:00").getTime(),
+				x = setInterval(function() {    
 
 				const now = new Date().getTime(),
-					  distance = countDown - now;
+					distance = countDown - now;
 
 				document.getElementById("dias").innerText = Math.floor(distance / (day)),
-				  document.getElementById("horas").innerText = Math.floor((distance % (day)) / (hour)),
-				  document.getElementById("minutos").innerText = Math.floor((distance % (hour)) / (minute)),
-				  document.getElementById("segundos").innerText = Math.floor((distance % (minute)) / second);
+					document.getElementById("horas").innerText = Math.floor((distance % (day)) / (hour)),
+					document.getElementById("minutos").innerText = Math.floor((distance % (hour)) / (minute)),
+					document.getElementById("segundos").innerText = Math.floor((distance % (minute)) / second);
 
 				//do something later when date is reached
 				if (distance < 0) {
-				  document.getElementById("headline").innerText = "Gracias por asistir!";
-				  document.getElementById("countdown").style.display = "none";
-				  document.getElementById("content").style.display = "block";
-				  clearInterval(x);
+					document.getElementById("headline").innerText = "Gracias por asistir!";
+					document.getElementById("countdown").style.display = "none";
+					document.getElementById("content").style.display = "block";
+					clearInterval(x);
 				}
 				//seconds
-			  }, 0)
-		  }());
+			}, 0)
+		}());
 	</script>
 </head>
 
@@ -66,7 +67,7 @@
 		<button id="play-button" class="play-button"><i class="fas fa-play"></i></button>
 	</div>
 
-    <script type="text/javascript">
+	<script type="text/javascript">
 		const audio = document.getElementById("audio");
 		const playButton = document.getElementById("play-button");
 
@@ -85,10 +86,10 @@
 		});
 	</script>
 	
-    <div class="content" id="content">
+	<div class="content" id="content">
 		<div class="animate__animated animate__fadeIn animate__slower"><img src="foto.png" alt="Foto" class="foto" width="997" height="378"></div>
 		<div class="animate__animated animate__fadeInUp"><h1>Gina&nbsp;&Roberto</h1></div>		
-        <div class="animate__animated animate__fadeInUp animate__delay-1s"><p>Estamos complacidos de invitarlos a la misa de acción de gracias por nuestro:</p></div>
+		<div class="animate__animated animate__fadeInUp animate__delay-1s"><p>Estamos complacidos de invitarlos a la misa de acción de gracias por nuestro:</p></div>
 		<div class="animate__animated animate__zoomIn animate__delay-2s"><h2>15<sup>&nbsp;o</sup> Aniversario de Bodas</h2></div>
 		<div class="animate__animated animate__zoomIn animate__delay-3s"><h3>Sábado&nbsp;&nbsp;|&nbsp;&nbsp;31 de Enero de 2026&nbsp;&nbsp;|&nbsp;&nbsp;1:00 p.m.</h3></div>
 		<div class="animate__animated animate__fadeInUp animate__delay-4s">
@@ -110,7 +111,7 @@
 		</div>	
 	</div>
 
-    <div id="CalendarContainer">
+	<div id="CalendarContainer">
 		<add-to-calendar-button 
 			id="css-part-example"
 			name="Gina & Roberto | XV Aniversario de Bodas"
