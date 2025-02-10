@@ -17,7 +17,7 @@
 	display: inline-block;
 }
 .play-button {
-	background-color: #edb6b2;
+	background-color: #ee7c9d;
 	color: #ffffff;
 	border: none;
 	border-radius: 50%;
@@ -28,7 +28,7 @@
 	outline: none;
 }
 .play-button:hover {
-	background-color: #9DAE8B;
+	background-color: #edb6b2;
 }	
 	
 /* Texto General */
