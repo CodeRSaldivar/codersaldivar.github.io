@@ -6,19 +6,46 @@
 	<meta http-equiv="Pragma" content="no-cache">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gina & Roberto | XV Aniversario de Bodas</title>
-	<!--https://fonts.google.com/ //-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Petemoss&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> <!--//-->
     <style>
+		:root {
+			/* Animate.CSS */
+			/* --animate-delay: 1.25s; /**/
+		  
+			/* Countdown*/
+			--smaller: .75;
+		}		
         * {
             	margin: 0;
             	padding: 0;
             	box-sizing: border-box;
         }
+		/* Musica de fondo */
+        .audio-container {
+            position: fixed; right:0;
+            display: inline-block;
+        }
+        .play-button {
+            background-color: #5B6454;
+            color: #ffffff;
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            outline: none;
+        }
+        .play-button:hover {
+            background-color: #9DAE8B;
+        }		
 		/* Texto General */
         body {
             	/*background: url('boda.jpg') no-repeat center center fixed;
@@ -47,6 +74,7 @@
 		  width: 100%;
 		  max-width: 450px;
 		  height: auto;
+		  --animate-delay: 8s;
 		}
 		/* Quienes */
         h1 {
@@ -86,43 +114,188 @@
 				font-family: 'Cormorant', serif;					
 				font-size: clamp(4px, 3vw, 16px);		
         }
-        .countdown {
-				font-family: 'Cormorant', serif;
-				font-size: clamp(18px, 3vw, 24px);
-				margin-top: 72px;
-        }
+		
+		/* Countdown */
+		.container {
+		  color: #333;
+		  margin: 0 auto;
+		  text-align: center;
+		  margin-top: 56px;/**/
+		}
+		
+		countDown-li {
+		  display: inline-block;
+		  font-size: 1.05em;
+		  list-style-type: none;
+		  padding: 1em;
+		  /*text-transform: uppercase; /**/
+		}
+
+		countDown-li span {
+		  display: block;
+		  font-size: 3.5rem;
+		}
+
+		@media all and (max-width: 640px) {
+		  
+		  countDown-li {
+			font-size: calc(1.125rem * var(--smaller));
+		  }
+		  
+		  countDown-li span {
+			font-size: calc(3.375rem * var(--smaller));
+		  }
+		}		
+		.header {
+		  position: absolute;
+		  /*margin-top: -10px;/**/
+		  /*background-color: #d81b60; /**/
+		  left:0;
+		  right:0;
+		  /*margin:15px;/**/
+		  /*padding:10px;/**/
+		  /*font-size: large;/**/
+		  margin-top: 5px;/**/
+		}		
+		
+  add-to-calendar-button#css-part-example::part(atcb-button),
+  #atcb-btn-css-part-example-modal-host::part(atcb-button) {
+    background-color: #f5f0f0;
+    color: #000; /*#f2ebeb; /**/
+  }
+  
+  #CalendarContainer {
+	display:none;
+	margin-top: -25px;/**/
+  }
     </style>
+	<!-- Add-To-Calendar-Button -->	
+	<script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.7.1.js"></script>
+    <script type="text/javascript">
+	$(document).ready(function() {
+		$('#CalendarContainer').delay(5500).fadeIn(500);
+	});
+  </script>
+	<script>
+		(function () {
+		  const second = 1000,
+				minute = second * 60,
+				hour = minute * 60,
+				day = hour * 24;
+
+		  const countDown = new Date("January 31, 2026 13:00:00").getTime(),
+			  x = setInterval(function() {    
+
+				const now = new Date().getTime(),
+					  distance = countDown - now;
+
+				document.getElementById("dias").innerText = Math.floor(distance / (day)),
+				  document.getElementById("horas").innerText = Math.floor((distance % (day)) / (hour)),
+				  document.getElementById("minutos").innerText = Math.floor((distance % (hour)) / (minute)),
+				  document.getElementById("segundos").innerText = Math.floor((distance % (minute)) / second);
+
+				//do something later when date is reached
+				if (distance < 0) {
+				  document.getElementById("headline").innerText = "Feliz Aniversario!";
+				  document.getElementById("countdown").style.display = "none";
+				  document.getElementById("content").style.display = "block";
+				  clearInterval(x);
+				}
+				//seconds
+			  }, 0)
+		  }());
+	</script>
 </head>
 <body>
-    <div class="content" id="content">
-		<img src="foto.png" alt="Foto" class="foto" width="997" height="378">
-        <h1>Gina&nbsp;&Roberto</h1>
-        <p>Estamos complacidos de invitarlos a la misa de acción de gracias por nuestro:</p>
-		<h2>XV Aniversario de Bodas</h2>
-		<h3>Sábado&nbsp;&nbsp;|&nbsp;&nbsp;31 de Enero de 2026&nbsp;&nbsp;|&nbsp;&nbsp;1:00 p.m.</h3>
-		<h4>Templo de San Antonio de Padua</h4>
-        <h5>Zaragoza esquina Pedro Parga, Zona Centro, Aguascalientes, Ags.</h5>
-        <div class="countdown" id="countdown"></div>
+    <div class="audio-container">
+        <audio id="audio" autoplay>
+            <source src="music.mp3" type="audio/mpeg">
+            ...
+        </audio>
+        <!-- Utiliza iconos de Font Awesome en lugar de caracteres Unicode -->
+        <button id="play-button" class="play-button"><i class="fas fa-play"></i></button>
+
     </div>
+
     <script>
-        function updateCountdown() {
-            const eventDate = new Date("January 31, 2026 13:00:00").getTime();
-            const now = new Date().getTime();
-            const timeLeft = eventDate - now;
+        const audio = document.getElementById("audio");
+        const playButton = document.getElementById("play-button");
 
-            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-            document.getElementById("countdown").innerHTML = `Faltan ${days} días, ${hours} horas, ${minutes} minutos y ${seconds} segundos`;
-
-            if (timeLeft < 0) {
-                document.getElementById("countdown").innerHTML = "¡El evento ha comenzado!";
+        playButton.addEventListener("click", () => {
+            if (audio.paused) {
+                audio.play();
+                playButton.innerHTML = '<i class="fas fa-pause"></i>';
+            } else {
+                audio.pause();
+                playButton.innerHTML = '<i class="fas fa-play"></i>';
             }
-        }
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
+        });
+
+        // Reproducir automáticamente al cargar la página
+        window.addEventListener("load", () => {
+            audio.play();
+        });
     </script>
+	
+    <div class="content" id="content">
+		<div class="animate__animated animate__fadeIn animate__slower"><img src="foto.png" alt="Foto" class="foto" width="997" height="378"></div>
+		
+		<div class="animate__animated animate__fadeInUp"><h1>Gina&nbsp;&Roberto</h1></div>		
+        
+        <div class="animate__animated animate__fadeInUp animate__delay-1s"><p>Estamos complacidos de invitarlos a la misa de acción de gracias por nuestro:</p></div>
+				
+		<div class="animate__animated animate__zoomIn animate__delay-2s"><h2>XV Aniversario de Bodas</h2></div>
+
+		<div class="animate__animated animate__zoomIn animate__delay-3s"><h3>Sábado&nbsp;&nbsp;|&nbsp;&nbsp;31 de Enero de 2026&nbsp;&nbsp;|&nbsp;&nbsp;1:00 p.m.</h3></div>
+		
+		<div class="animate__animated animate__fadeInUp animate__delay-4s">
+			<h4>Templo de San Antonio de Padua</h4>
+			<h5>Zaragoza esquina Pedro Parga, Zona Centro, Aguascalientes, Ags.</h5>
+		</div>
+
+		<div class="animate__animated animate__fadeInUp animate__delay-5s">		
+			<div class="container">
+				<div class="header">Nos vemos en...</div>
+			
+				<div id="countdown">
+					<ul>
+					  <countDown-li><span id="dias"></span>dias</countDown-li>
+					  <countDown-li><span id="horas"></span>horas</countDown-li>
+					  <countDown-li><span id="minutos"></span>minutos</countDown-li>
+					  <countDown-li><span id="segundos"></span>segundos</countDown-li>
+					</ul>
+				</div> 		
+				
+			</div>	
+		</div>	
+
+	</div>
+
+    <div id="CalendarContainer">
+	
+		<add-to-calendar-button 
+			id="css-part-example"
+			name="Gina & Roberto | XV Aniversario de Bodas"
+			description="Nos complace invitarlos a la misa de acción de gracias por nuestro XV Aniversario de Bodas"
+			startDate="2026-01-31"
+			startTime="13:00"
+			endDate="2026-01-31"
+			endTime="23:59"
+			timeZone="America/Mexico_City"
+			location="Templo de San Antonio de Padua, Calle Pedro Parga 252, Zona Centro, 20000 Aguascalientes, Ags., Mexico"
+			options="'Apple','Google','Outlook.com','Microsoft365'"
+			listStyle="dropup-static"
+			buttonStyle="round"
+			trigger="click"
+			language="es"
+			pastDateHandling="hide"			  
+			inline
+			hideBackground
+		></add-to-calendar-button>	
+	
+	</div>
+	
 </body>
 </html>
