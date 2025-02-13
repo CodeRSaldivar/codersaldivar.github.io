@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+	<title>Gina & Roberto</title>
 	<link rel="preload" href="fondo.jpg" as="image">
 	<link rel="icon" href="favicon.png">
 	<meta charset="UTF-8">
 	<meta http-equiv="Pragma" content="no-cache">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Gina & Roberto</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
@@ -27,117 +27,22 @@
 		body {
 			position: relative;
 			overflow: hidden;
-			background-size: cover; /* */
+			background-size: cover; /**/
 			background-image: url('fondo.jpg');/**/			
 			background-repeat: no-repeat;
-			background-position: center center; /* */
-			background-size: cover; /* */
-			background-attachment: fixed; /* */
+			background-position: center center; /**/
+			background-size: cover; /**/
+			background-attachment: fixed; /**/
 			min-height:100%;
 		}
-
-		h1 {
-			position: absolute;/**/	
-			font-family: "Allura", serif;
-			font-weight: 400;
-			font-style: normal;
-			font-size: clamp(1rem, -1.0313rem + 6.5vw, 2.625rem);
-			margin-top: 7vh;
-			margin-left: 1vw;		
-			color: #fff;
-		}	
-
-		h2 {
-			position: absolute;/**/
-			font-family: "Allura", serif;
-			font-weight: 400;
-			font-style: normal;
-			font-size: clamp(1rem, -1.0313rem + 6.5vw, 2.625rem);
-			margin-top: 12vh;
-			margin-left: 1vw;		
-			color: #fff;
-		}	
-
-		h3 {
-			font-family: "Allura", serif;
-			font-weight: 400;
-			font-style: normal;
-			font-size: clamp(1rem, -1.0313rem + 6.5vw, 2.625rem);
-			margin-top: 17vh;
-			margin-right: 1vw;
-			color: #fff;
-		}
-
-		.right1 { 
-			text-align: right;    
-			right: 0px;/**/ 
-		}  
-
-		@media screen and (max-width: 1024px) { /**/
-			h1{
-				position: absolute;     
-				text-align: center;    
-				top: 0px;/**/ 
-				width: 97%;
-				margin-top: 7vh;
-			}
-			h2{
-				position: absolute;     
-				text-align: center;    
-				top: 0px;/**/ 
-				width: 97%;
-				margin-top: 12vh;
-			}
-			h3{
-				position: absolute;     
-				text-align: center;    
-				top: 0px;/**/ 
-				width: 97%;
-				margin-top: 17vh;
-			}
-			
-			.right1 { 
-				text-align: center;    
-				right: 0px;/**/ 
-			}  
-		}/**/
-
-		h4 {
-			font-family: "Petemoss", serif;
-			font-weight: 400;
-			font-style: normal;
-			font-size: clamp(4.5rem, 2.625rem + 6vw, 6rem);
-			color: #fff;
-		}
 		
-		.footer1 { 
-			position: fixed;     
-			text-align: center;    
-			bottom: 0px;/**/ 
-			width: 97%;
-			margin-bottom: 7.5vh;
-		}  
-
-		h5 {
-			font-family: "Allura", serif;
-			font-weight: 400;
-			font-style: normal;
-			font-size: clamp(1.625rem, 1.1563rem + 1.5vw, 2rem);
-			color: #fff;
-		}
-
-		.footer2 { 
-			position: fixed;     
-			text-align: center;    
-			bottom: 0px;/**/ 
-			width: 97%;
-			margin-bottom: 4.5vh;
-		}  
-	</style>
-	<style>
 		.comets {
-			width: 150vw;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100vw;
 			height: 25vh;
+			pointer-events: none;
 			transform-origin: center;
 			transform: translate3D(-25vw, -25vh, 1px) rotate(95deg) scale(0.9);
 		}
@@ -180,6 +85,104 @@
 				transform: translateY(0) scaleY(1);
 			}
 		}
+		
+		h1 {
+			position: absolute;/**/	
+			font-family: "Allura", serif;
+			font-weight: 400;
+			font-style: normal;
+			font-size: clamp(1rem, -1.0313rem + 6.5vw, 2.625rem);/* 16/42 @ 500 */
+			margin-top: 7vh;
+			margin-left: 1vw;		
+			color: #fff;
+		}	
+
+		h2 {
+			position: absolute;/**/
+			font-family: "Allura", serif;
+			font-weight: 400;
+			font-style: normal;
+			font-size: clamp(1rem, -1.0313rem + 6.5vw, 2.625rem);/* 16/42 @ 500 */
+			margin-top: 12vh;
+			margin-left: 1vw;		
+			color: #fff;
+		}	
+
+		h3 {
+			font-family: "Allura", serif;
+			font-weight: 400;
+			font-style: normal;
+			font-size: clamp(1rem, -1.0313rem + 6.5vw, 2.625rem);/* 16/42 @ 500 */
+			margin-top: 17vh;
+			margin-right: 1vw;
+			color: #fff;
+		}
+
+		.right1 { 
+			text-align: right;    
+			right: 0px;/**/ 
+		}  
+
+		@media screen and (max-width: 1600px) { /* @500 */
+			h1{
+				position: absolute;     
+				text-align: center;    
+				top: 0px;/**/ 
+				width: 97%;
+				margin-top: 7vh;
+			}
+			h2{
+				position: absolute;     
+				text-align: center;    
+				top: 0px;/**/ 
+				width: 97%;
+				margin-top: 12vh;
+			}
+			h3{
+				position: absolute;     
+				text-align: center;    
+				top: 0px;/**/ 
+				width: 97%;
+				margin-top: 17vh;
+			}
+			
+			.right1 { 
+				text-align: center;    
+				right: 0px;/**/ 
+			}  
+		}/**/
+
+		h4 {
+			font-family: "Petemoss", serif;
+			font-weight: 400;
+			font-style: normal;
+			font-size: clamp(4.5rem, 2.625rem + 6vw, 6rem);/* 72/96 @ 500 */
+			color: #fff;
+		}
+		
+		.footer1 { 
+			position: fixed;     
+			text-align: center;    
+			bottom: 0px;/**/ 
+			width: 97%;
+			margin-bottom: 7.5vh;
+		}  
+
+		h5 {
+			font-family: "Allura", serif;
+			font-weight: 400;
+			font-style: normal;
+			font-size: clamp(1.625rem, 1.1563rem + 1.5vw, 2rem);/* 24/32 @ 500 */
+			color: #fff;
+		}
+
+		.footer2 { 
+			position: fixed;     
+			text-align: center;    
+			bottom: 0px;/**/ 
+			width: 97%;
+			margin-bottom: 4.5vh;
+		}  
 	</style>
 </head>
 
@@ -206,8 +209,8 @@
 			comet.style.top = cometY + "px";
 			Comets.append(comet);
 		}
-
-	setInterval(createComet, 1500);
+		
+		setInterval(createComet, 1500);
 	</script>
 </body>
 
