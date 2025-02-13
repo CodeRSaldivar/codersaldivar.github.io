@@ -202,7 +202,7 @@
 				Comets.children[0].remove();
 			}
 			let cometX = Math.round(Math.random() * window.innerWidth);
-			let cometY = Math.round(Math.random() * window.innerHeight);
+			let cometY = Math.round(Math.random() * window.innerHeight * 0.5);
 			let comet = document.createElement("div");
 			comet.setAttribute("class", "comet");
 			comet.style.left = cometX + "px";
