@@ -182,7 +182,29 @@
 			bottom: 0px;/**/ 
 			width: 97%;
 			margin-bottom: 4.5vh;
-		}  
+		}
+
+		.floating-button-container {
+		  position: fixed; /* Makes the container stay in place as the user scrolls */
+		  bottom: 20px; /* Adjust distance from the bottom */
+		  right: 20px; /* Adjust distance from the right */
+		  z-index: 9999; /* Ensures the button appears above other content */
+		}
+
+		.continue-button {
+		  background-color: #2c497f; /* Example background color */
+		  color: #ffffff; /* Example text color */
+		  padding: 10px 20px;
+		  border: none;
+		  border-radius: 5px;
+		  cursor: pointer;
+		  font-size: 16px;
+		  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for a floating effect */
+		}
+
+		.continue-button:hover {
+		  background-color: #0056b3; /* Example hover effect */
+		}
 	</style>
 </head>
 
@@ -192,7 +214,11 @@
 	<div class="animate__animated animate__fadeIn animate__delay-3s"><h3><div class="right1">...en el instante menos esperado, pero en el momento indicado.</h3></div></div><!-- //-->
 	<div class="animate__animated animate__fadeIn animate__delay-4s"><h4><div class="footer1">Gina&nbsp;&Roberto</div></h4></div><!-- //-->
 	<div class="animate__animated animate__fadeIn animate__delay-5s"><h5><div class="footer2">15 Aniversario</div></h5></div><!-- //-->
-
+	
+	<div class="floating-button-container">
+	  <button class="continue-button">Continuar...</button>
+	</div>
+	
 	<div class="comets"></div>
 	<script>
 		const Comets = document.querySelector(".comets");
@@ -215,3 +241,4 @@
 </body>
 
 </html>
+
